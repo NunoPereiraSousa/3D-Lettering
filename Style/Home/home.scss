@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+// FC814A
+
+.loading {
+    font-size: 1em;
+    letter-spacing: 100px;
+}
+
+.bg1 {
+    height: 100vh;
+    background-color: red;
+
+    &::after {
+        animation: bg-animation 8s steps(10) infinite;
+        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+        content: "";
+        height: 300%;
+        left: -50%;
+        opacity: 0.3;
+        position: fixed;
+        top: -110%;
+        width: 200vw;
+    }
+
+    #section1 {
+        position: relative;
+        z-index: 10;
+        width: 100vw;
+        height: 100vh;
+    
+        
+    }
+}
+
+.bg2 {
+    height: 100vh;
+    background-color: #ff5100;
+
+    &::after {
+        animation: bg-animation 8s steps(10) infinite;
+        background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png");
+        content: "";
+        height: 300%;
+        left: -50%;
+        opacity: 0.3;
+        position: fixed;
+        top: -110%;
+        width: 200vw;
+    }
+
+    #section2 {
+        position: relative;
+        z-index: 10;
+        height: 100vh;
+    }
+}
+
+canvas:focus {
+    outline: none;
+}
+
+@keyframes bg-animation {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    10% {
+        transform: translate(-15%, -15%)
+    }
+
+    20% {
+        transform: translate(-20%, 15%)
+    }
+
+    30% {
+        transform: translate(15%, -20%)
+    }
+
+    40% {
+        transform: translate(-15%, 25%)
+    }
+
+    50% {
+        transform: translate(-20%, 20%)
+    }
+
+    60% {
+        transform: translate(25%, 10)
+    }
+
+    70% {
+        transform: translate(10, 20%)
+    }
+
+    80% {
+        transform: translate(-25%, 10)
+    }
+
+    90% {
+        transform: translate(20%, 15%)
+    }
+
+    100% {
+        transform: translate(15%, 10)
+    }
+}
